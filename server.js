@@ -73,4 +73,7 @@ wss.on("connection", (ws, req) => {
 });
 
 const PORT = Number(process.env.PORT || 3000);
-server.listen(PORT, () => console.log(`✅ FlatFinder running at http://localhost:${PORT}`));
+
+server.listen(PORT, "0.0.0.0", () => {
+  console.log(`✅ FlatFinder running on port ${PORT}`);
+});
